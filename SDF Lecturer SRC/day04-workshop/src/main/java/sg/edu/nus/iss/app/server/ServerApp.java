@@ -67,7 +67,7 @@ public class ServerApp {
                             String randomCookie = getRandomCookie(cookieFile, 
                                         cookieResultFile,
                                         mailmergeFile);
-                            dos.writeUTF("cookie-text_" + randomCookie);
+                            dos.writeUTF("cookie-text_" + randomCookie);    
                         }else{
                             dos.writeUTF("Invalid command !");
                         }
