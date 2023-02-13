@@ -29,7 +29,7 @@ public class Session {
         while(!stop){
             String input = cons.readLine("> ");
             String[] terms = input.split(" ");
-            switch(terms[0]){
+            switch(terms[0]){   
                 case LIST:
                     System.out.printf("Items in %s's "
                          + "shopping cart\n", currCart.getUsername());

@@ -52,7 +52,7 @@ public final class App {
 
         while (!conInput.equalsIgnoreCase("Q")) {
             String randomIdiom = "";
-
+            
             displayMenu();
             conInput = con.readLine("Enter your selection:");
 
