@@ -1,0 +1,82 @@
+            newdeck[i].setNumber(i);
+            newdeck[i].setSuit("C");
+            newdeck[i + (decksize/numSuits)].setNumber(i);
+            newdeck[i + (decksize/numSuits)].setSuit("D");
+            newdeck[i + (2*decksize/numSuits)].setNumber(i);
+            newdeck[i + (decksize/numSuits)].setSuit("H");
+            newdeck[i + (3*decksize/numSuits)].setNumber(i);
+            newdeck[i + (decksize/numSuits)].setSuit("S");
+
+    for (int i = 0; i < decksize; i++){
+        newdeck[i] = new Card();
+    }
+            for(int i = 0; i < 2; i++){
+            this.newdeck[i].setNumber(i);
+            this.newdeck[i].setSuit("C");
+            this.newdeck[i + (decksize/numSuits)].setNumber(i);
+            this.newdeck[i + (decksize/numSuits)].setSuit("D");
+            this.newdeck[i + (2*decksize/numSuits)].setNumber(i);
+            this.newdeck[i + (decksize/numSuits)].setSuit("H");
+            this.newdeck[i + (3*decksize/numSuits)].setNumber(i);
+            this.newdeck[i + (decksize/numSuits)].setSuit("S");
+        }
+            public void initDeck(){
+        for(int i = 0; i < decksize/numSuits; i++){
+            Card cardArr [i] = new Card(i ,"C"); //0-12 - 13 cards
+            Card cardArr [i + (decksize/numSuits)] = new Card(i ,"D"); //13-25 - 13 cards
+            Card cardArr [i + (2*decksize/numSuits)] = new Card(i ,"H"); //26-38 - 13 cards
+            Card cardArr [i + (3*decksize/numSuits)] = new Card(i ,"S"); //39-51 - 13 cards
+        }
+    }
+
+    cardRank[j],suitType[i],cardValues[j]
+
+    
+            mydeck.fan();
+
+                    for(int i = 0; i < suitType.length;i++){
+            for(int j = 0; i < cardValues.length;j++){
+
+
+
+    private int rank = 0; // A to K is 1 to 13
+    private String suit = " ";
+    private String value = " ";
+    
+    public Card(){}
+
+    public Card(int rank, String suit, String value) {
+        this.rank = rank;
+        this.suit = suit;
+        this.value = value;
+    }
+]
+
+
+    
+    // not required, once card is set it is set
+
+
+    // not required, once card is set it is set
+
+ 
+}
+
+    private int decksize = 52;
+    
+
+
+    public String[] suitType = {"C","D","H","S"};
+    public String[] cardValues = {"Ace","2","3","4","5","6","7","8","9","J","Q","K"};
+    public int[] cardRank = {1,2,3,4,5,6,7,8,9,10,10,10,10};
+
+ 
+    
+    //default size of deck is 52. 
+    public Deck(){ //assume 52 for now. extend to Uno later
+        Card c = new Card();
+    } 
+
+    // Why Public?
+
+    // this is better because you are not hard coding decks properties

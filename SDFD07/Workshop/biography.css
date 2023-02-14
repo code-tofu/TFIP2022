@@ -1,0 +1,52 @@
+.col-4 {
+}
+
+.col-8 {
+}
+
+.aside_title {
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.section_text {
+  padding: 5% 0%;
+}
+
+.carousel {
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  border-radius: 50px;
+  margin: 10px 0px;
+}
+
+.card {
+  margin: 5%;
+}
+
+.wickCarousel {
+  display: flex;
+  justify-content: center;
+}
+
+.margin-bot {
+  margin-bottom: 40px;
+}
+
+.hire_me input:valid,
+.hire_me textarea:valid {
+  background: #fff url("../images/valid.png");
+}

@@ -1,0 +1,31 @@
+        mergeCookies( Mergepath, randomCookie);
+
+
+//NOT TESTED YET
+    public static void mergeCookies(String textPath, String randomCookie) throws IOException{
+
+        int cookieLetters = randomCookie.length();
+
+        Path p = Paths.get(textPath);
+        File f = p.toFile();
+        InputStream is = new FileInputStream(f);
+        InputStreamReader isr = new InputStreamReader(is);
+        BufferedReader br = new BufferedReader(isr);
+
+        String line;
+        FileWriter cookieWriter = new FileWriter("merge.txt");
+        while ((line = br.readLine()) != null) {
+            String[] words = line.split(" ");
+            for (int i = 0; i <words.length;i++){
+                if(words[i] == "\\$count\\"){ //need a regex
+                    cookieWriter.write(Integer.toString(cookieLetters));
+                } else{
+                    cookieWriter.write(words[i] + "");
+                }
+            }
+        }
+        cookieWriter.close();
+        br.close();
+        isr.close();
+        is.close();
+    }

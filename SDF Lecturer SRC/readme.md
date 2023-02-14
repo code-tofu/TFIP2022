@@ -3,3 +3,8 @@ https://github.com/kenken64/sdf-b3-cookieRandomizer
 https://github.com/kenken64/sdf-b3-workshop3
 https://github.com/kenken64/sdfb3workshop6
 https://github.com/darryl1975/day7_revision
+https://github.com/darryl1975/day9_scissorpaperstone
+https://github.com/darryl1975/day9_clientworkshop
+https://github.com/darryl1975/day9_serverworkshop
+https://github.com/darryl1975/day08_workshop
+https://github.com/darryl1975/day7_sdfworkshop

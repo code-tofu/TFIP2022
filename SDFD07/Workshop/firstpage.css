@@ -1,0 +1,41 @@
+body {
+  background-color: #252627;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: #F2EFE9;
+}
+
+h1 {
+  color: #b2c2bf;
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #904E55;
+}
+
+#table1 {
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+tr,
+td {
+  border: 2px solid;
+  border-color: #564E58;
+  color: #F2EFE9;
+}
+
+li {
+  color: #F2EFE9;
+}
+
+a:link{
+    color: #904E55;
+}
+}
