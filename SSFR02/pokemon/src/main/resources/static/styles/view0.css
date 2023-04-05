@@ -1,0 +1,10 @@
+.maxwidth800 {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .margin-tb{
+    margin-top:50px;
+    margin-bottom:50px;
+
+  }

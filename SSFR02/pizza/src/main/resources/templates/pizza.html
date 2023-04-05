@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <h1>Order Delivery Details</h1>
+    <form method="post" action="#" data-th-action="@{/pizza/order}" data-th-object=" ${delivery}">
+        <p>Name:</p>
+        <input type="text" placeholder="Placeholder Name" data-th-field="*{name}" /><br>
+        <span data-th-if="${#fields.hasErrors('name')}"><p data-th-errors="*{name}" class="blue"></p></span>
+
+        <p>Address:</p>
+        <input type="text" placeholder="Placeholder Name" data-th-field="*{address}" /><br>
+        <span data-th-if="${#fields.hasErrors('address')}" data-th-errors="*{address}" th:errorclass="error"></span>
+
+        <p>Phone:</p>
+        <input type="text" placeholder="Placeholder Name" data-th-field="*{phone}" /><br>
+        <span data-th-if="${#fields.hasErrors('phone')}" data-th-errors="*{phone}" th:errorclass="error"></span>
+
+        <p>Rush:</p>
+        <input type="checkbox" checked placeholder="Placeholder Name" data-th-field="*{rush}" /><br>
+
+        <p>Comments:</p>
+        <input type="text" placeholder="Placeholder Name" data-th-field="*{comments}" /><br>
+
+        <button type="submit" formmethod="GET" formaction="/">Cancel Order</button>
+        <button type="submit">Place Order</button>
+        <button type="reset">Clear Details</button>
+    </form>
+
+
+    
+</body>
+</html>

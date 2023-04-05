@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+  </head>
+  <body>
+    <tr th:each="love: ${allLove}">
+      <td>
+        <a data-th-href="@{/lovecalc/{loveId}(loveId=${love.key})}">
+          <span th:text="${love.key}"></span
+        ></a>
+      </td>
+      <td th:text="${love.value.fname} + ' and ' + ${love.value.sname}"></td>></td>
+      <td th:text="${love.value.percentage} + '%'"></td>
+      <td th:text="${love.value.result}"></td>
+      <br />
+    </tr>
+    <br />
+    <a href="/lovecalc">Give Me more Loves!</a>
+  </body>
+</html>

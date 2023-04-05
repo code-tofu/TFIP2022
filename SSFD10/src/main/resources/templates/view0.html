@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+	TODO: Task 1, Task 2, Task 3
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h2>Please Login</h2>
+
+    <form
+      action="#"
+      method="POST"
+      data-th-action="@{/login}"
+      data-th-object="${user}"
+    >
+      <table>
+        <tr>
+          <td>
+            <label for="username">Username:</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              id="username"
+              size="30"
+              placeholder="Please type in your username"
+              data-th-field="*{username}"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password:</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              id="password"
+              size="30"
+              placeholder="Please type in your password"
+              data-th-field="*{password}"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Login</button>
+          </td>
+        </tr>
+        <tr data-th-if="${#fields.hasErrors('captchaAnswer')}">
+          <p>Please key in Captcha Verification</p>
+          <span>What is </span>
+          <span data-th-each="string:${captcha}">
+            <span data-th-text="${string}"></span>
+          </span>
+          <span>?</span>
+          <p>Round any decimals to nearest 2 decimal places</p>
+          <input
+            type="text"
+            id="answer"
+            size="30"
+            placeholder="Please type in your answer"
+            data-th-field="*{captchaAnswer}"
+          />
+        </tr>
+      </table>
+      <div data-th-if="${#fields.hasErrors('username')}">
+        <p data-th-errors="*{username}" th:errorclass="error"></p>
+      </div>
+      <div data-th-if="${#fields.hasErrors('password')}">
+        <p data-th-errors="*{password}" th:errorclass="error"></p>
+      </div>
+      <div data-th-if="${#fields.hasErrors('captchaAnswer')}">
+        <p data-th-errors="*{captchaAnswer}" th:errorclass="error"></p>
+      </div>
+    </form>
+  </body>
+</html>
