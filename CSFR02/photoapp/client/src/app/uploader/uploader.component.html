@@ -1,0 +1,27 @@
+<div class="container-bg">
+    <h2>View 1: Uploader</h2>
+
+    <form [formGroup]="archiveForm" (submit)="upload()">
+        <p><label>Name:</label>
+            <input class="width-100" type="text" formControlName="name">
+        </p>
+
+        <p><label>Title:</label>
+            <input class="width-100" type="text" formControlName="title">
+        </p>
+
+        <p><label>Comments:</label>
+            <textarea class="width-100" rows="5" type="password" formControlName="comments"></textarea>
+        </p>
+        <p><label>Archive:</label>
+            <input type="file" formControlName="file" #uploadElement>
+        </p>
+        <button type="submit" class="btn btn-primary" [disabled]="archiveForm.invalid">Submit</button>
+    </form>
+    <br>
+    <!-- <button type="button" class="btn btn-dark" [routerLink]="['/']">Cancel</button> -->
+
+
+
+
+</div>

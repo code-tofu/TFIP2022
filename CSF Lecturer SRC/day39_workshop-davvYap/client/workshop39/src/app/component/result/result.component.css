@@ -1,0 +1,8 @@
+.hero-button {
+  width: 100%;
+}
+
+.hero-button:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+}
